@@ -1,5 +1,15 @@
 *{
     box-sizing: border-box;
+    color: black;
+    list-style: none;
+    font-size: 20px;
+}
+h1{
+    text-align: center;
+    color: #fff;
+    margin-top: 140px;
+    margin-bottom: 100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 html,body{
     width: 100%;
@@ -11,3 +21,56 @@ html,body{
     flex-wrap: wrap;
 }
 
+
+.row{
+    display: flex;
+justify-content: center;
+align-items: center;
+
+    li{
+        width: 60px;
+        height: 60px;
+        background-color: rgb(48, 173, 136);
+        margin: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+ }
+}
+
+// for true buttons
+.item_u:hover {
+   color: rgb(0, 0, 0);
+   animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+   transform: translate3d(0, 0, 0);
+   background-color:rgb(43, 255, 0) ;
+   animation-iteration-count: infinite;
+}
+
+// for fatall buttons
+li:hover{
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    background-color:red;
+    animation-iteration-count: 1;
+}
+
+
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
