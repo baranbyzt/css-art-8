@@ -32,6 +32,11 @@ let item_m = $(".item_m");
 let item_ö = $(".item_ö");
 let item_ç = $(".item_ç");
 
+var abc = document.getElementById("main_sayac");
+
+let bigbang = 0;
+
+
 
 let letter= [
     item_q,item_w,item_e,item_r,item_t,
@@ -43,58 +48,93 @@ let letter= [
     item_m,item_ö,item_ç
 ]
 
-let er = item_q;
-let sayi = [item_q]
-
-// burada 0 ile 33 arasında rastgele bir sayı tanımlıyoruz.
+// here we define a random number between 0 and 33.
 var  random_number = Math.floor(Math.random() * 33);
 
 $(document).ready(function(){ 
 
+console.log("true number ---> "+ letter[random_number].text())
 
 
 
 
+ $(letter[random_number]).css({
+    "color": "rgb(0, 0, 0)",
+    "animation": "shake 0.82s cubic-bezier(.36,.07,.19,.97) both",
+    "transform":" translate3d(0, 0, 0)",
+    "background-color":"rgb(43, 255, 0)" ,
+  
+});
 
+ 
 
 $('html').keydown(function(event){
-      let basilan_tus = event.key;
+    let basilan_tus = event.key;
 
+
+    for (let i = 0; i < letter.length; i++) {
+if(letter[i].text() == basilan_tus){
+    $(letter[i]).css({
+        "animation": "shake 0.82s cubic-bezier(.36,.07,.19,.97) both",
+        "transform": "translate3d(0, 0, 0)",
+        "background-color":"red",
+      });
+} else{}
+      }
+
+     
 
 if(letter[random_number].text() == basilan_tus){
-    console.log("doğrudur paşşam")
-    random_number = Math.floor(Math.random() * 33);
-    console.log("yenisi --> "+letter[random_number].text() )
+  console.log("correct")
+  
+  bigbang=bigbang+10;
+  abc.innerHTML = bigbang
+
+  $(letter[random_number]).css({
+    "color": "rgb(0, 0, 0)",
+    "animation": "shake 0.82s cubic-bezier(.36,.07,.19,.97) both",
+    "transform":" translate3d(0, 0, 0)",
+    "background-color":"rgb(48, 173, 136)" ,
+  
+});
+ 
+
+  random_number = Math.floor(Math.random() * 33);
+  console.log("yenisi --> "+ letter[random_number].text())
+
+
+  $(letter[random_number]).css({
+    "color": "rgb(0, 0, 0)",
+    "animation": "shake 0.82s cubic-bezier(.36,.07,.19,.97) both",
+    "transform":" translate3d(0, 0, 0)",
+    "background-color":"rgb(43, 255, 0)" ,
+   " animation-iteration-count": "infinite"
+});
+
 }
-else{
-    console.log("vallahyi yanılştır. doğrusu ----> "+ letter[random_number].text())
+else{ 
+
+
+  console.log("that is not correct ----> "+ letter[random_number].text())
+
+
+bigbang= bigbang -10;
+abc.innerHTML = bigbang;
+
 }
 
 
 
-   })
+ })
+
+
+
+
+
+
 
 
 });
-
-
-/*
-
-if(letter[random_number].text() == basilan_tus){
-    console.log("doğrudur paşşam")
-    random_number = Math.floor(Math.random() * 33);
-    console.log("yenisi --> "+letter[random_number].text() )
-}
-else{
-    console.log("vallahyi yanılştır. doğrusu ----> "+ letter[random_number].text())
-}
-
-
-*/
-
-
-
-
 
 
 

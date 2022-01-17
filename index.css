@@ -3,7 +3,7 @@
           box-sizing: border-box;
   color: black;
   list-style: none;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 h1 {
@@ -29,6 +29,19 @@ html, body {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+html .sayac_div, body .sayac_div {
+  color: white;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+html .sayac_div p, body .sayac_div p {
+  padding-left: 30px;
+  display: inline;
+  color: white;
 }
 
 .row {
@@ -57,28 +70,7 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-radius: 20px;
-}
-
-.item_u:hover {
-  color: black;
-  -webkit-animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-          animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-  background-color: #2bff00;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-
-li:hover {
-  -webkit-animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-          animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-  background-color: red;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
+  border-radius: 15px;
 }
 
 @-webkit-keyframes shake {

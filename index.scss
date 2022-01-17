@@ -2,7 +2,7 @@
     box-sizing: border-box;
     color: black;
     list-style: none;
-    font-size: 20px;
+    font-size: 25px;
 }
 h1{
     text-align: center;
@@ -19,6 +19,17 @@ html,body{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    .sayac_div{
+      color: white;
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      p{ 
+        padding-left: 30px;
+      display: inline;
+        color: white;
+      }
+    }
 }
 
 
@@ -35,25 +46,8 @@ align-items: center;
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 20px;
+        border-radius: 15px;
  }
-}
-
-// for true buttons
-.item_u:hover {
-   color: rgb(0, 0, 0);
-   animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
-   transform: translate3d(0, 0, 0);
-   background-color:rgb(43, 255, 0) ;
-   animation-iteration-count: infinite;
-}
-
-// for fatall buttons
-li:hover{
-    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
-    transform: translate3d(0, 0, 0);
-    background-color:red;
-    animation-iteration-count: 1;
 }
 
 
