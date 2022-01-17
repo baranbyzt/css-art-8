@@ -33,20 +33,64 @@ let item_ö = $(".item_ö");
 let item_ç = $(".item_ç");
 
 
+let letter= [
+    item_q,item_w,item_e,item_r,item_t,
+    item_y,item_u,item_ı,item_o,item_p,
+    item_ğ,item_ü,item_a,item_s,item_d,
+    item_f,item_g,item_h,item_h,item_j,
+    item_k,item_l,item_ş,item_i,item_z,
+    item_x,item_c,item_v,item_b,item_n,
+    item_m,item_ö,item_ç
+]
 
-$(document).ready(function(){
+let er = item_q;
+let sayi = [item_q]
 
-    item_ç.click(function(){
-alert("ticket ç "+item_ç)
-    })
-    
-  });
+// burada 0 ile 33 arasında rastgele bir sayı tanımlıyoruz.
+var  random_number = Math.floor(Math.random() * 33);
 
-
+$(document).ready(function(){ 
 
 
 
 
+
+
+
+$('html').keydown(function(event){
+      let basilan_tus = event.key;
+
+
+if(letter[random_number].text() == basilan_tus){
+    console.log("doğrudur paşşam")
+    random_number = Math.floor(Math.random() * 33);
+    console.log("yenisi --> "+letter[random_number].text() )
+}
+else{
+    console.log("vallahyi yanılştır. doğrusu ----> "+ letter[random_number].text())
+}
+
+
+
+   })
+
+
+});
+
+
+/*
+
+if(letter[random_number].text() == basilan_tus){
+    console.log("doğrudur paşşam")
+    random_number = Math.floor(Math.random() * 33);
+    console.log("yenisi --> "+letter[random_number].text() )
+}
+else{
+    console.log("vallahyi yanılştır. doğrusu ----> "+ letter[random_number].text())
+}
+
+
+*/
 
 
 
